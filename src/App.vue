@@ -5,16 +5,22 @@
 <template>
   <t-layout class="container">
     <t-header class="header">
-      xxx
+      <t-head-menu default-value="home" expand-type="popup">
+        <div class="menu-hold"></div>
+        <t-menu-item value="home" to="/">首页</t-menu-item>
+        <t-menu-item value="leave-message" to="/leaveMessage">留言</t-menu-item>
+        <template #operations>
+          <a href="javascript:void(0)">
+            <t-icon class="t-menu__operations-icon" name="search"/>
+          </a>
+        </template>
+      </t-head-menu>
     </t-header>
-    <t-layout class="content-wrapper">
-      <t-content class="content">
-        123
-      </t-content>
-      <t-aside>
-        564
-      </t-aside>
-    </t-layout>
+    <div class="content-wrapper">
+      <router-view>
+
+      </router-view>
+    </div>
     <t-footer class="footer">
       Copyright @ 2022 red. All Rights Reserved
     </t-footer>
@@ -23,7 +29,7 @@
 
 <style scoped>
 .container {
-  background-color: #ffffff;
+  background-color: #FFFDF9;
 }
 
 .header {
@@ -33,18 +39,17 @@
   top: 0;
   left: 0;
   width: 100%;
+  z-index: 100;
+  box-shadow: 0 2px 6px 0 rgb(0 0 0 / 17%);
+}
+
+.menu-hold {
+  margin-left: 300px;
 }
 
 .content-wrapper {
-  background-color: #ffffff;
-  margin: 0 auto;
-  padding: 75px 0 15px 0;
-  width: 800px;
-}
-
-.content {
-  background-color: red;
-  min-height: 1500px;
+  margin: 75px auto 15px auto;
+  width: 885pt;
 }
 
 .footer {
