@@ -29,7 +29,7 @@
 
 <style scoped>
 .container {
-  background-color: #FFFDF9;
+  background-color: #F6F6F6;
 }
 
 .header {
