@@ -49,7 +49,10 @@
 
 .content-wrapper {
   margin: 75px auto 15px auto;
-  width: 885pt;
+}
+
+.content-wrapper > section {
+  background-color: transparent;
 }
 
 .footer {
